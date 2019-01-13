@@ -13,4 +13,4 @@ PyTweening==1.0.3
 
 using Python 3
 
-# Preview: https://www.youtube.com/watch?v=DkkEb0x3I4M
+# Preview: https://youtu.be/TeaQoeSvn1E
