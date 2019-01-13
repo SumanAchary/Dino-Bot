@@ -4,11 +4,9 @@ from PIL import ImageGrab, ImageOps
 import time
 from numpy import *
 
-
 class Cordinates():
-    replayBtn = (480, 577)
-    dinasaur = (246, 540)
-
+    replayBtn = (480, 577) # Coordinates of the replay button on the screen
+    dinasaur = (246, 540) # Coordinates of the dinosaur Object
 
 def restartGame():
     pyautogui.click(Cordinates.replayBtn)
@@ -18,10 +16,8 @@ def pressSpace():
     time.sleep(0.05)
     print("Object detected : Jump")
     pyautogui.keyUp('space')
-    # x = 280 is tree
-    # y = 617
-
-# imageGrab = 0
+    # (280,617) Coordinates of the tree  (varies for different computers)
+    # in case of any issues contact : suman.achary95@gmail.com
 
 def imageGrab():
     box = (
@@ -33,8 +29,7 @@ def imageGrab():
     imageGrab = a.sum()
     return imageGrab
 
-
-def jumpWhileTree():
+def jumpWhileObject():
     restartGame()
     while True:
         if imageGrab() != 4927:
@@ -42,5 +37,4 @@ def jumpWhileTree():
             pressSpace()
             time.sleep(0.01)
 
-
-jumpWhileTree()
+jumpWhileObject()
